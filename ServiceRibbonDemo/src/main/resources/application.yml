@@ -1,0 +1,29 @@
+server:
+  port: 9085
+spring:
+  application:
+    name: ribbonservice
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/ams?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 123456
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
+
+logging:
+  # 声明指定的feign service 服务的日志级别为debug，可以打印出服务调用的详情
+  level:
+    com:
+      itjcloud:
+        resource:
+          api: DEBUG
