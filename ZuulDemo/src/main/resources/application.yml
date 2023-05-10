@@ -1,12 +1,57 @@
 
 server:
   port: 10010
-spring:
-  application:
-    name: zuuldemo
-zuul:
-  prefix: /api
+  servlet:
+    context-path: /
+
+
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:9000/eureka
+
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true   #开启Eureka服务发现
+          lower-case-service-id: true
+      # 路由数组：指当请求满足什么样的断言时，转发到哪个服务上
+      routes:
+        # 路由标识，要求唯一，名称任意
+        - id: ribbonservice
+          # 请求最终被转发到的目标地址
+#          uri: http://localhost:9085
+          #上面为不做负载的，下面为做了负载均衡的
+          uri: lb://ribbonservice
+          # 设置断言
+          predicates:
+            # Path Route Predicate Factory 断言，满足 /gateway/provider/** 路径的请求都会被路由到 http://localhost:9024 这个uri中
+            - Path=/gateway/**
+            # Weight Route Predicate Factory 断言，同一分组按照权重进行分配流量，这里分配了80%
+            # 第一个group1是分组名，第二个参数是权重
+#            - Weight=group1, 8
+          # 配置过滤器（局部）
+          filters:
+#            - AddResponseHeader=X-Response-Foo, Bar
+            # StripPrefix：去除原始请求路径中的前1级路径，即/gateway
+            - StripPrefix=1
+
+#        - id: gateway-provider_2
+#          uri: http://localhost:9081
+#          # 设置断言
+#          predicates:
+#            - Path=/gateway/**
+#            # Weight Route Predicate Factory，同一分组按照权重进行分配流量，这里分配了20%
+#            - Weight=group1, 2
+#          # 配置过滤器（局部）
+#          filters:
+#            # StripPrefix：去除原始请求路径中的前1级路径，即/gateway
+#            - StripPrefix=1
+#            - AddResponseHeader=X-Response-Foo, Bar
+logging:
+  level:
+    root: debug
