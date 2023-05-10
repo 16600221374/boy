@@ -24,3 +24,13 @@ logging:
   level:
     root: INFO
     org.example.api.FeignDemo: DEBUG
+
+jdbc:
+  url: jdbc:mysql://127.0.0.1:3306/ams?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+  driver: com.mysql.cj.jdbc.Driver
+  username: root
+  password: 123456
+  url2: jdbc:mysql://192.168.1.100:3306/ams?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+  driver2: com.mysql.cj.jdbc.Driver
+  username2: root
+  password2: 123456
