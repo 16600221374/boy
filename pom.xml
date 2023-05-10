@@ -10,11 +10,20 @@
     <module>ZuulDemo</module>
     <module>ServiceRibbonDemo</module>
     <module>service</module>
+    <module>ServiceApi</module>
   </modules>
   <packaging>pom</packaging>
 
   <name>boy</name>
   <url>http://maven.apache.org</url>
+
+  <distributionManagement>
+    <repository>
+      <url>file://D:/job/repo</url>
+      <id>org.example.boy</id>
+      <name>local Release</name>
+    </repository>
+  </distributionManagement>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

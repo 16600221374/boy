@@ -12,6 +12,13 @@
 
     <name>ServiceRibbonDemo</name>
     <url>http://maven.apache.org</url>
+    <distributionManagement>
+        <repository>
+            <url>file://D:/job/repo</url>
+            <id>org.example.ServiceRibbonDemo</id>
+            <name>local Release</name>
+        </repository>
+    </distributionManagement>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

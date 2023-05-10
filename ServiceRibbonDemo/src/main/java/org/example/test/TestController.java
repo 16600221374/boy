@@ -1,9 +1,8 @@
 package org.example.test;
 
-import org.example.api.FeignDemo;
+import org.example.serviceapi.ServiceApi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,13 +10,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/ribbon/test")
 public class TestController {
 
-    @Qualifier("org.example.api.FeignDemo")
+
+    @Qualifier("org.example.serviceapi.ServiceApi")
     @Autowired
-    public FeignDemo feignDemo;
+    public ServiceApi feignDemo;
 
 
     @RequestMapping("/getString")
-    public String getString(){
+    public String getString() {
         System.out.println("这个完成了");
         return feignDemo.getString();
     }

@@ -9,7 +9,6 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  *
  */
 @SpringBootApplication(scanBasePackages = {"org.example.*"})
-@EnableEurekaClient
 public class ServiceApplication
 {
     public static void main( String[] args )

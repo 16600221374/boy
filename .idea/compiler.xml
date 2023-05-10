@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="service" />
+        <module name="ServiceApi" />
         <module name="EurekaDemo" />
         <module name="red-impl" />
         <module name="red-api" />
@@ -21,6 +22,7 @@
       <module name="red-api" target="1.8" />
       <module name="red-impl" target="1.8" />
       <module name="ServiceDemo" target="1.8" />
+      <module name="serviceDemo" target="1.8" />
       <module name="ServiceDemo1" target="1.8" />
       <module name="ServiceDemo1-api" target="1.8" />
       <module name="ServiceDemo1-impl" target="1.8" />
@@ -29,6 +31,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="EurekaDemo" options="-parameters" />
+      <module name="ServiceApi" options="-parameters" />
       <module name="ServiceDemo" options="-parameters" />
       <module name="ServiceDemo1" options="-parameters" />
       <module name="ServiceDemo1-api" options="-parameters" />
@@ -40,6 +43,7 @@
       <module name="red-api" options="-parameters" />
       <module name="red-impl" options="-parameters" />
       <module name="service" options="-parameters" />
+      <module name="serviceDemo" options="-parameters" />
     </option>
   </component>
 </project>

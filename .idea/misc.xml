@@ -14,6 +14,7 @@
         <option value="$PROJECT_DIR$/girl/pom.xml" />
         <option value="$PROJECT_DIR$/red-api/pom.xml" />
         <option value="$PROJECT_DIR$/red-impl/pom.xml" />
+        <option value="$PROJECT_DIR$/serviceDemo/pom.xml" />
       </set>
     </option>
   </component>

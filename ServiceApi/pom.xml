@@ -7,16 +7,16 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>EurekaDemo</artifactId>
+    <artifactId>ServiceApi</artifactId>
     <packaging>jar</packaging>
 
-    <name>EurekaDemo</name>
+    <name>ServiceApi</name>
     <url>http://maven.apache.org</url>
 
     <distributionManagement>
         <repository>
             <url>file://D:/job/repo</url>
-            <id>org.example.EurekaDemo</id>
+            <id>org.example.ServiceApi</id>
             <name>local Release</name>
         </repository>
     </distributionManagement>
@@ -26,21 +26,11 @@
     </properties>
 
     <dependencies>
-        <!--web起步依赖-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <!-- Eureka服务端 -->
+        <!--Spring Cloud OpenFeign Starter -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-            <version>2.2.1.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-autoconfigure</artifactId>
-            <version>2.1.4.RELEASE</version>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <version>2.1.0.RELEASE</version>
         </dependency>
     </dependencies>
 </project>

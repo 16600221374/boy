@@ -2,7 +2,7 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/EurekaDemo/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ServiceDemo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ServiceApi/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ServiceDemo1/ServiceDemo1-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ServiceDemo1/ServiceDemo1-impl/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ServiceDemo1/src/main/java" charset="UTF-8" />
@@ -15,6 +15,7 @@
     <file url="file://$PROJECT_DIR$/red-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/red-impl/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/serviceDemo/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>

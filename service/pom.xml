@@ -13,6 +13,14 @@
     <name>service</name>
     <url>http://maven.apache.org</url>
 
+    <distributionManagement>
+        <repository>
+            <url>file://D:/job/repo</url>
+            <id>org.example.service</id>
+            <name>local Release</name>
+        </repository>
+    </distributionManagement>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -52,6 +60,12 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
             <version>2.1.0.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>ServiceApi</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 </project>
